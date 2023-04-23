@@ -1,0 +1,126 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu';
+    line-height: 1.5;
+}
+
+.color-navy {
+    background: #1e3d59;
+    color: #fff;
+}
+
+.color-almond {
+    background: #f5f0e1;
+}
+
+.color-redOrange {
+    background: #ff6e40;
+    color: #fff;
+}
+
+.color-mango {
+    background: #ffc13b;
+}
+
+article {
+    padding: 3rem;
+    text-align: justify;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem rgb(150, 148, 148);
+    border-radius: 2%;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
+}
+
+header.major,
+footer {
+    text-align: center;
+    padding: 3rem;
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+div.title {
+    line-height: 0.5;
+}
+
+.title h2 {
+    font-size: .75rem;
+}
+
+.title p {
+    font-size: .75rem;
+}
+
+.article-grid-main {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+     'one'
+     'two'
+     'three'
+     'four'
+     'five';
+  
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+  }
+  
+  .article-grid:nth-child(1) {
+    grid-area: one;
+  }
+  .article-grid:nth-child(2) {
+    grid-area: two;
+  }
+  .article-grid:nth-child(3) {
+    grid-area: three;
+  }
+  .article-grid:nth-child(4) {
+    grid-area: four;
+  }
+  .article-grid:nth-child(5) {
+    grid-area: five;
+  }
+  
+  @media screen and (min-width: 33em) {
+    .article-grid-main {
+        grid-template-areas:
+        "one one"
+        "two three"
+        "five five"
+        "four four";
+    }
+  }
+  
+  @media screen and (min-width: 38em) {
+    .article-grid-main {
+      grid-template-areas:
+       'one one'
+       'two five'
+       'three five'
+       'four four';
+    }
+  }
+  
+  @media screen and (min-width: 54em) {
+    .article-grid-main {
+        grid-template-areas:
+        "one one two"
+        "five five five"
+        "three four four";
+    }
+  }
+  
+  @media screen and (min-width: 75em) {
+    .article-grid-main {
+        grid-template-areas:
+        "one one two five"
+        "three four four five";
+    }
+  }
